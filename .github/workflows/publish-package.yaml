@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: blabib
+        working-directory: ./blabib
     steps:
       - uses: actions/checkout@v3
 
