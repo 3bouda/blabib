@@ -2,7 +2,7 @@
   "name": "blabib",
   "version": "0.0.2",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@3abdoul9arrayorg"
+    "registry": "https://npm.pkg.github.com/@3abdoul9array"
   },
   "repository": {
     "type": "git",
