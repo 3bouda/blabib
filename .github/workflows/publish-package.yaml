@@ -30,7 +30,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: library-dist
-          path: ../
+          path: dist
 
       - name: Login to npm (if publishing publicly)
         run: |
