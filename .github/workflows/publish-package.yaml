@@ -34,11 +34,11 @@ jobs:
 
       - name: Login to npm (if publishing publicly)
         run: |
-          if [ ${{ secrets.GITHUB_TOKEN }} ]; then
-            echo "//registry.npmjs.org/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
+          if [ ${{ secrets.BLA_TOKEN }} ]; then
+            echo "//registry.npmjs.org/:_authToken=${{ secrets.BLA_TOKEN }}" >> ~/.npmrc
             echo "Successfully logged in to npm registry"
           else
-            echo "Skipping npm login as GITHUB_TOKEN is not provided"
+            echo "Skipping npm login as BLA_TOKEN is not provided"
           fi
 
       - name: Publish the library (if publishing publicly)
@@ -49,9 +49,9 @@ jobs:
 
       - name: Deploy to npm (if publishing publicly)
         run: |
-          if [ ${{ secrets.GITHUB_TOKEN }} ]; then
+          if [ ${{ secrets.BLA_TOKEN }} ]; then
             npm publish
             echo "Successfully published library to npm"
           else
-            echo "Skipping npm publish as GITHUB_TOKEN is not provided"
+            echo "Skipping npm publish as BLA_TOKEN is not provided"
           fi
