@@ -35,6 +35,7 @@ jobs:
       - name: Login to npm (if publishing publicly)
         run: |
           if [ ${{ secrets.GITHUB_TOKEN }} ]; then
+            npm login
             echo "//registry.npmjs.org/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
             echo "Successfully logged in to npm registry"
           else
