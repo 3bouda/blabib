@@ -50,7 +50,7 @@ jobs:
       - name: Deploy to npm (if publishing publicly)
         environment:
           NPM_TOKEN:
-            from_secret: NPM_TOKEN
-        commands:
+            from_secret: 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
+        run: |
           - echo //registry.npmjs.org/:_authToken=$NPM_TOKEN > .npmrc
           - npm publish
