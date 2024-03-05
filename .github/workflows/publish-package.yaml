@@ -50,7 +50,7 @@ jobs:
       - name: Deploy to npm (if publishing publicly)
         run: |
           if [ ${{ secrets.GITHUB_TOKEN }} ]; then
-            npm publish --access public  # Publish with public access
+            npm publish
             echo "Successfully published library to npm"
           else
             echo "Skipping npm publish as GITHUB_TOKEN is not provided"
