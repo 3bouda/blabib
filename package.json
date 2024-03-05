@@ -1,6 +1,9 @@
 {
   "name": "blabib",
   "version": "0.0.2",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@3abdoul5addem"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/3bouda/blabib.git"
