@@ -49,10 +49,9 @@ jobs:
           path: ~/.npmrc
 
       - name: Deploy to npm (if publishing publicly)
-        run: |
-          if [ ${{ secrets.GITHUB_TOKEN }} ]; then
-            npm publish
-            echo "Successfully published library to npm"
-          else
-            echo "Skipping npm publish as GITHUB_TOKEN is not provided"
-          fi
+        environment:
+          NPM_TOKEN:
+            from_secret: NPM_TOKEN
+        commands:
+          - echo //registry.npmjs.org/:_authToken=$NPM_TOKEN > .npmrc
+          - npm publish
