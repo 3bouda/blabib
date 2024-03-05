@@ -1,9 +1,9 @@
 {
-  "name": "@3abdoul9arrayorg/blabib",
-  "version": "0.0.0",
+  "name": "blabib",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
-    "url": "https://github.com/3bouda/blabib.git"
+    "url": "git+https://github.com/3bouda/blabib.git"
   },
   "scripts": {
     "ng": "ng",
