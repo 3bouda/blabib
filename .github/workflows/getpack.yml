@@ -1,0 +1,29 @@
+name: Build and Publish Library
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./
+    steps:
+      - uses: actions/checkout@v3
+
+
+      - name: Use Node.js 18
+        uses: actions/setup-node@v3
+
+      - name: Install Angular CLI globally
+        run: npm install -g @angular/cli
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install pack
+        run: npm install @3bouda/testpackage@0.0.28
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
