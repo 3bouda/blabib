@@ -23,7 +23,9 @@ jobs:
         run: npm install
 
       - name: Install pack
-        run: npm install @3bouda/testpackage@0.0.28
+        run: |
+
+            npm install @3bouda/testpackage@0.0.28
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.BLA_TOKEN}}
 
